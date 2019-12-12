@@ -36,5 +36,14 @@
 		return $result;
 	}
 
+	function userView()
+	{
+		$conn = getConn();
+		$sql = "select * from users";
+		$result = mysqli_query($conn,$sql);
+
+		return $result;
+	}
+
 
  ?>
