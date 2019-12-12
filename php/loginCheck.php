@@ -4,26 +4,24 @@
 	
 	if(isset($_POST['submit'])){
 
-		$uname = $_POST['uname'];
-		$pass = $_POST['pass']
+		$u = $_POST['uname'];
+		$p = $_POST['pass'];
 
-		if(empty($uname) == true || empty($pass) == true){
+		if($u == "" || $p == ""){
 			echo "null submission!";
 		}else{
 
-			$user = validate($uname, $password);
+			$user = validate($u, $p);
 
 			if(count($user) > 0){
-				$_SESSION['username'] = $uname;
-				$_SESSION['password'] = $password;
+				$_SESSION['username'] = $u;
+				$_SESSION['password'] = $p;
 				if ($user['type'] == "Admin") {
 					header('location: ../view/adminhome.php');
 				}else{
 					header('location: ../view/userhome.php');
 				}
 				
-				
-
 			}else{
 				echo "invalid username/password";
 			}

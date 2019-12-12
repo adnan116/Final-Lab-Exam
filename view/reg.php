@@ -41,9 +41,12 @@
 				</tr>
 				
 				<tr>
-					<td colspan="2">
+					<td>
 						<input type="submit" name="submit" value="Registration">
 						<input type="reset" name="reset" value="Reset">
+					</td>
+					<td>
+						<a href="../index.php">Login</a>
 					</td>
 				</tr>
 			</table>

@@ -4,19 +4,24 @@
 
 	if(isset($_POST['submit'])){
 
-		$name = $_POST['athname'];
-		$cno = $_POST['cnum'];
-		$uname = $_POST['uname'];
+		$id = $_POST['id'];
 		$pass = $_POST['pass'];
 		$cpass = $_POST['cpass'];
-		if(empty($name) == true || empty($cno) == true || empty($uname) == true || empty($pass) == true || empty($cpass) == true){
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$utype = $_POST['utype'];
+		if($id == "" || $pass == "" || $cpass == "" || $name == "" || $email == "" || $utype == ""){
 			echo "null submission!";
 		}elseif ($pass != $cpass) {
 			echo "password not match";
-		}
+		}elseif (strlen($pass) < 5) {
+			echo "Password minimum 5 character";
+		}/*elseif (strpos($pass, '$') == false && strpos($pass, '@') == false && strpos($pass, '#') == false && strpos($pass, '&') == false) {
+			echo "Password must have a special character";
+		}*/
 		else{
 
-			$status = register($name, $cno, $uname, $pass);
+			$status = register($id, $pass, $name, $email, $utype);
 
 			if($status){
 

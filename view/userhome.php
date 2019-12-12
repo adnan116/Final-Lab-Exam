@@ -5,6 +5,7 @@
 
  ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,12 +18,12 @@
 
 		<a href="profile.php">Profile</a><br>
 		<a href="changePassword.php">Change Password</a><br>
-		<a href="viewuser.php">View User</a><br>
 		<a href="../php/logout.php">Logout</a>
 
 	</center>
 </body>
 </html>
+
 
 <?php 
 
