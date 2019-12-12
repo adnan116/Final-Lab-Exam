@@ -12,14 +12,15 @@
  </head>
  <body>
 
+ 	<h1>Profile View</h1>
  	<?php 
 
- 		$result = single_user($_SESSION['username']);
- 		$row = mysqli_fetch_assoc($result);
+ 		$r = single_user($_SESSION['username']);
+ 		$row = mysqli_fetch_assoc($r);
 
  	 ?>
  	
- 	<table>
+ 	<table border="1px">
  		<tr>
  			<td colspan="2" align="center">Profile</td>
  		</tr>
