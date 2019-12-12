@@ -27,5 +27,14 @@
 
 	}
 
+	function single_user($name)
+	{
+		$conn = getConn();
+		$sql = "select * from author where name='{$name}'";
+		$result = mysqli_query($conn,$sql);
+
+		return $result;
+	}
+
 
  ?>
